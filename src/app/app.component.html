@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+<body>
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default" *ngFor='let x of data'>
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#{{x.name}}">{{x.title}}</a>
+                </h4>
+            </div>
+            <div id="{{x.name}}" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>{{x.description}}</p>
+                </div>
+            </div>
+      </div> 
+    </div>
+</body>
+<router-outlet></router-outlet>
